@@ -407,6 +407,37 @@ html {
   cursor: pointer;
 }
 
+/* Highlight top bar icons & text */
+.top-bar small,
+.top-bar i,
+.top-bar a i {
+    color: #080808 !important;
+    font-weight: 600;
+}
+
+
+/* Pack of 10 pieces bigger */
+.pack-text {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: #FFFFFF !important;
+}
+
+/* Free delivery + Call Us horizontal & bigger */
+.info-row {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.info-row p {
+    font-size: 20px;
+    font-weight: 700;
+    color: white !important;
+}
+
+
 .whatsapp-chat:hover {
   background-color: #20ba5a !important;
   transform: scale(1.1);
