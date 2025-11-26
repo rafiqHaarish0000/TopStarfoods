@@ -244,7 +244,14 @@ html {
 .about-img img {
     position: relative;
     z-index: 2;
+    opacity: 120%;
 }
+
+.about-img::before {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
 
 .about-img::before {
     position: absolute;
@@ -466,6 +473,120 @@ html {
 .carousel-caption a {
     font-size: 18px;
 }
+    /* Accordion Margin Structure Styles */
+    .margin-accordion .accordion-item {
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+    }
+    
+    .margin-accordion .accordion-item:hover {
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        transform: translateY(-2px);
+    }
+    
+    .margin-accordion .accordion-button {
+        background-color: #f8f9fa;
+        color: #495057;
+        font-size: 1.1rem;
+        padding: 1.25rem 1.5rem;
+        border: none;
+        box-shadow: none;
+        transition: all 0.3s ease;
+    }
+    
+    .margin-accordion .accordion-button:not(.collapsed) {
+        background-color: var(--primary);
+        color: white;
+        box-shadow: none;
+    }
+    
+    .margin-accordion .accordion-button:not(.collapsed) i {
+        color: white;
+    }
+    
+    .margin-accordion .accordion-button i {
+        font-size: 1.3rem;
+        color: var(--primary);
+        transition: all 0.3s ease;
+    }
+    
+    .margin-accordion .accordion-button:hover {
+        background-color: #e9ecef;
+    }
+    
+    .margin-accordion .accordion-button:not(.collapsed):hover {
+        background-color: var(--primary);
+        opacity: 0.95;
+    }
+    
+    .margin-accordion .accordion-button::after {
+        filter: brightness(0) saturate(100%);
+        transition: all 0.3s ease;
+    }
+    
+    .margin-accordion .accordion-button:not(.collapsed)::after {
+        filter: brightness(0) invert(1);
+    }
+    
+    .margin-accordion .accordion-body {
+        padding: 2rem 1.5rem;
+        background-color: white;
+    }
+    
+    .margin-card {
+        border: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+    
+    .margin-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .benefit-card {
+        border: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+    
+    .benefit-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+    
+    .eligibility-card {
+        border: 2px solid #e9ecef;
+    }
+    
+    .accordion-collapse {
+        transition: height 0.35s ease;
+    }
+    
+    @media (max-width: 768px) {
+        .margin-accordion .accordion-button {
+            font-size: 1rem;
+            padding: 1rem;
+        }
+        
+        .margin-accordion .accordion-button i {
+            font-size: 1.1rem;
+        }
+        
+        .margin-accordion .accordion-body {
+            padding: 1.5rem 1rem;
+        }
+         /* CTA Button */
+    .btn-lg {
+        font-size: 14px !important;
+        padding: 12px 24px !important;
+    }
+    }
+
+
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
@@ -507,6 +628,139 @@ html {
         margin-left: 0 !important;  /* removes left spacing */
     }
 }
+
+/* ---------------------------------
+      MOBILE RESPONSIVE STYLES
+-----------------------------------*/
+@media (max-width: 767px) {
+
+    /* ---------- NAVBAR ---------- */
+    .top-bar {
+        display: none !important;
+    }
+
+    .navbar {
+        padding: 10px 15px !important;
+    }
+
+    .navbar-brand img {
+        height: 90px !important;    /* Reduce big logo */
+    }
+
+    .navbar-collapse {
+        background: #fff;
+        padding: 20px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0 !important;
+        font-size: 16px;
+    }
+
+    /* ---------- PAGE HEADER ---------- */
+    .section-header h1 {
+        font-size: 21px !important;
+        line-height: 32px;
+        max-width: 500px !important;
+    }
+
+    .section-header p {
+        font-size: 14px !important;
+    }
+
+    @media (max-width: 767px) {
+    .container-xxl.mobile-padding-fix {
+        padding-top: 120px !important;   /* adjust as needed */
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+    /* ---------- PRODUCT BANNER IMAGE ---------- */
+    .product-banner img,
+    img[alt="Margin Structure"] {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 0;
+    }
+
+    /* ---------- GENERAL SPACING ---------- */
+    .container-xxl {
+  
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .py-6 {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    /* ---------- ACCORDION ---------- */
+    .accordion-button {
+        font-size: 15px !important;
+        padding: 12px !important;
+    }
+
+    .accordion-body {
+        padding: 15px !important;
+    }
+
+    .margin-card,
+    .benefit-card,
+    .eligibility-card {
+        padding: 15px !important;
+    }
+
+    .benefit-card i {
+        font-size: 40px !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* ---------- GRID FIXES ---------- */
+    .col-md-6,
+    .col-md-4,
+    .col-sm-6 {
+        width: 100% !important;
+    }
+
+    .row.g-3 > div {
+        margin-bottom: 15px !important;
+    }
+
+    /* ---------- FIRM VISIT SECTION ---------- */
+    .bg-icon {
+        padding: 40px 15px !important;
+        text-align: center;
+    }
+
+    .bg-icon h1 {
+        font-size: 26px;
+    }
+
+    .bg-icon p {
+        font-size: 14px;
+    }
+
+    .bg-icon .btn {
+        margin-top: 20px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+        text-align: center !important;
+    }
+
+    .footer img {
+        height: 110px !important;
+    }
+
+    .footer .col-md-6,
+    .footer .col-lg-4 {
+        text-align: center !important;
+    }
+}
+
 
 
 
