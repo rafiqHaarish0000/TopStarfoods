@@ -77,3 +77,33 @@
     
 })(jQuery);
 
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent default form submission
+
+    // Get form values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // Simple validation
+    if (!name || !email || !subject || !message) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    // Validate email format
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    // If all good, open mail client
+    const mailtoLink = `mailto:topstarfoodssoft@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+    window.location.href = mailtoLink;
+
+    // Optional: show success message
+    alert("Your message is ready to be sent! Check your email client.");
+});
+

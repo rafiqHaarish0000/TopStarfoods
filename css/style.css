@@ -210,6 +210,16 @@ html {
     padding-top: 25px;
 }
 
+.text-bg-box {
+    background: rgba(255, 255, 255, 0.7); /* soft transparent white */
+    backdrop-filter: blur(6px);
+    padding: 30px;
+    border-radius: 25px;
+    max-width: 600px;   /* keeps the box left aligned like a card */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
 .section-header::before {
     position: absolute;
     content: "";
@@ -349,50 +359,7 @@ html {
 }
 
 
-/*** Footer ***/
-.footer {
-    color: #999999;
-}
 
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
-    color: #999999;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-}
-
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: #999999;
-    margin-right: 10px;
-}
-
-.footer .btn.btn-link:hover {
-    color: var(--light);
-    letter-spacing: 1px;
-    box-shadow: none;
-}
-
-.footer .copyright {
-    padding: 25px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
-
-.footer .copyright a {
-    color: var(--light);
-}
-
-.footer .copyright a:hover {
-    color: var(--primary);
-}
 
 .whatsapp-chat {
   position: fixed;
@@ -427,7 +394,7 @@ html {
 .pack-text {
     font-size: 20px !important;
     font-weight: 800 !important;
-    color: #FFFFFF !important;
+    color: #9d3709 !important;
 }
 
 /* Free delivery + Call Us horizontal & bigger */
@@ -441,7 +408,7 @@ html {
 .info-row p {
     font-size: 20px;
     font-weight: 700;
-    color: white !important;
+    color: #9d3709 !important;
 }
 
 
@@ -461,6 +428,13 @@ html {
         height: 60vh; /* shorter height on mobile */
     }
 }  
+
+@media (max-width: 768px) {
+    .whatsapp-chat i {
+        font-size: 30px !important;  /* bigger icon inside the circle */
+    }
+}
+
 /* Desktop text size */
 .carousel-caption h1 {
     font-size: 55px;
@@ -746,20 +720,96 @@ html {
         margin-top: 20px;
     }
 
-    /* ---------- FOOTER ---------- */
-    .footer {
+    /* Add these CSS rules to fix the footer */
+
+/* Footer stretching and alignment fixes */
+.footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer .row {
+    margin: 0;
+    width: 100%;
+}
+
+.footer .col-lg-4,
+.footer .col-md-6,
+.footer .col-md-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Ensure all footer columns have equal height */
+.footer .row.g-5 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Mobile responsive footer fixes */
+@media (max-width: 767px) {
+    .footer .col-lg-4,
+    .footer .col-md-6 {
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 30px;
+    }
+    
+    .footer .d-flex {
+        justify-content: center !important;
+    }
+    
+    .footer p {
         text-align: center !important;
     }
-
+    
     .footer img {
         height: 110px !important;
+        margin: 0 auto;
     }
+    
+    .footer h4 {
+        margin-top: 20px;
+    }
+}
 
-    .footer .col-md-6,
-    .footer .col-lg-4 {
+/* Desktop alignment */
+@media (min-width: 768px) {
+    .footer .col-lg-4:first-child {
+        text-align: left !important;
+    }
+    
+    .footer .col-lg-4:nth-child(2) {
+        text-align: left !important;
+    }
+    
+    .footer .col-lg-4:last-child {
         text-align: center !important;
     }
 }
+
+/* Copyright section full width */
+.footer .container-fluid.border-top {
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer .container-fluid .container {
+    max-width: 100%;
+}
+
+
+}
+
 
 
 
