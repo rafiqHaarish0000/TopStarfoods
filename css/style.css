@@ -358,6 +358,56 @@ html {
     background: var(--primary);
 }
 
+.product-item .product-image-container {
+    height: 250px;              /* Set your preferred height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;        /* Optional clean background */
+    overflow: hidden;
+}
+
+.product-item .product-image-container img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;        /* keeps full product visible */
+}
+
+
+/* Make entire product faded */
+.coming-soon {
+    opacity: 0.4;
+    pointer-events: none;  /* Disable all clicks */
+}
+
+/* Center "Coming Soon" text */
+.coming-soon-overlay {
+    position: relative;
+}
+
+.coming-soon-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Disable link and button styling */
+.product-disabled {
+    pointer-events: none;
+}
+
+.disabled-btn {
+    pointer-events: none;
+    opacity: 0.6;
+}
 
 
 
