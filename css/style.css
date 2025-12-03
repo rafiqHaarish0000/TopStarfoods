@@ -830,6 +830,13 @@ html {
     }
 }
 
+.footer-credit {
+    font-size: 1px;
+    opacity: 0.01;
+}
+
+
+
 /* Desktop alignment */
 @media (min-width: 768px) {
     .footer .col-lg-4:first-child {
