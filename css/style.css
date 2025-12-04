@@ -204,6 +204,7 @@ html {
 }
 
 
+
 /*** Section Header ***/
 .section-header {
     position: relative;
@@ -299,6 +300,8 @@ html {
 .nav-pills .nav-item .btn.active {
     color: #FFFFFF;
 }
+
+
 
 .product-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
@@ -471,6 +474,67 @@ html {
 }
 
 
+/* Desktop view */
+.banner-text {
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    text-align: center;
+}
+
+.banner-heading {
+    color: black;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.sub-toggle {
+    padding: 8px 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+.sub-toggle .arrow {
+    transition: transform 0.3s ease;
+}
+
+.sub-toggle[aria-expanded="true"] .arrow {
+    transform: rotate(180deg);
+}
+
+
+
+/* 🔥 Mobile View Fix */
+@media (max-width: 767px) {
+
+        .banner-section {
+        margin-top: 100px; /* adjust as needed */
+    }
+
+    .banner-text {
+        bottom: -30px !important; /* move slightly up */
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90%; /* ensure text fits inside image */
+        text-align: center;
+        padding: 0;
+        
+    }
+
+    .banner-heading {
+        font-size: 1rem !important; /* smaller & clean */
+        line-height: 1.3 !important;
+        font-weight: 700;
+        word-break: break-word; /* prevents ugly breaks */
+        white-space: normal; /* wraps naturally */
+    }
+}
+
+
+
 .whatsapp-chat:hover {
   background-color: #20ba5a !important;
   transform: scale(1.1);
@@ -482,6 +546,27 @@ html {
     object-fit: cover; /* crop instead of shrink */
     object-position: center; /* keep center visible */
 }
+
+    /* Mobile View */
+    @media (max-width: 768px) {
+        .position-relative {
+            padding-top: 50px; /* Reduced top padding for smaller screens */
+        }
+
+        .main-heading {
+            font-size: 28px; /* Smaller font size for mobile */
+            line-height: 1.3;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .main-heading {
+            font-size: 22px; /* Even smaller on very small screens */
+            line-height: 1.2;
+        }
+    }
+
+    
 
 @media (max-width: 767px) {
     .price-text {
@@ -718,6 +803,8 @@ html {
         padding: 10px 0 !important;
         font-size: 16px;
     }
+
+    
 
     /* ---------- PAGE HEADER ---------- */
     .section-header h1 {

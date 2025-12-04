@@ -106,5 +106,18 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     // Optional: show success message
     alert("Your message is ready to be sent! Check your email client.");
 });
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Keep dropdown open on mobile when clicking inside
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.addEventListener('click', function(e) {
+            e.stopPropagation(); // VERY IMPORTANT
+        });
+    });
+
+});
+
+
+
 
 

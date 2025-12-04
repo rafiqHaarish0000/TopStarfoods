@@ -76,24 +76,50 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About Us</a>
-<div class="nav-item dropdown">
-    <a href="#" class="nav-link active dropdown-toggle" id="productsDropdown" data-bs-toggle="dropdown">
+<div class="nav-item dropdown" data-bs-auto-close="false">
+    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
         Our Products
     </a>
-    <div class="dropdown-menu">
-        <a href="product_chappati.html" class="dropdown-item">Chappati</a>
-        <a href="product_poori.html" class="dropdown-item">Poori</a>
-        <a href="product_idiyappam.html" class="dropdown-item">Idiyappam</a>
-        <a href="product_poratta.html" class="dropdown-item">Paratha</a>
-        <a href="product_idly.html" class="dropdown-item">Idly</a>
-        <a href="product_aappam.html" class="dropdown-item">Aappam</a>
-        <a href="product_sevai.html" class="dropdown-item">Sevai</a>
-        <a href="product_ginger_pickle.html" class="dropdown-item">Ginger Pickle</a>
-        <a href="product_idly_powder.html" class="dropdown-item">Idly Powder</a>
+
+    <div class="dropdown-menu p-2" style="width: 250px;">
+        
+<a class="sub-toggle d-flex justify-content-between align-items-center"
+   data-bs-toggle="collapse" 
+   href="#cookMenu"
+   onclick="event.stopPropagation()">
+    Ready to Cook
+    <span class="arrow">&#9662;</span>
+</a>
+        <div class="collapse ps-3" id="cookMenu">
+            <a href="product_chappati.html" class="dropdown-item">Chapati</a>
+            <a href="product_poori.html" class="dropdown-item">Poori</a>
+            <a href="product_poratta.html" class="dropdown-item">Paratha</a>
+            <a href="product_batter.html" class="dropdown-item">Idly/Dosa Batter</a>
+        </div>
+
+        <hr class="dropdown-divider">
+
+        <a class="sub-toggle d-flex justify-content-between align-items-center"
+           data-bs-toggle="collapse" href="#eatMenu" onclick="event.stopPropagation()">
+            Ready to Eat
+            <span class="arrow">&#9662;</span>
+        </a>
+
+        <div class="collapse ps-3" id="eatMenu">
+            <a href="product_sevai.html" class="dropdown-item">Sevai</a>
+            <a href="product_idiyappam.html" class="dropdown-item">Idiyappam</a>
+            <a href="product_idly.html" class="dropdown-item">Idly</a>
+            <a href="product_aappam.html" class="dropdown-item">Aappam</a>
+            <a href="product_ginger_pickle.html" class="dropdown-item">Injipuli</a>
+            <a href="product_idly_powder.html" class="dropdown-item">Idly Powder</a>
+        </div>
+
     </div>
 </div>
+
+
 
                     <a href="business_margins.html" class="nav-item nav-link">Business Margins</a>
                     <div class="nav-item dropdown">
@@ -123,20 +149,24 @@
     </div>
     <!-- Navbar End -->
 
-    <!-- Product Start -->
-     <div class="container-xxl py-6">
-        <div class="container" style="padding-top: 150px;">
-                        <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-5 mb-3">Our Products</h1>
-<p>
-   Experience authentic Indian flavors with our range of ready-to-eat and Freshly prepared, hygienically packed, and delivered with care.
-</p>
-            </div>
-<div class="tab-content">
-    <div id="tab-1" class="tab-pane fade show p-0 active">
+
+<!-- Product Start -->
+<div class="container-xxl py-6">
+    <div class="container" style="padding-top: 150px;">
+
+        <!-- Section Header -->
+        <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h1 class="display-5 mb-3">Our Products</h1>
+            <p>
+                Experience authentic Indian flavors with our range of ready-to-eat and freshly prepared, hygienically packed, and delivered with care.
+            </p>
+        </div>
+
+        <!-- Ready to Cook Section -->
+        <h2 class="mb-4">Ready to Cook</h2>
         <div class="row g-4">
 
-            <!-- 1 -->
+            <!-- Chapati -->
             <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="product-item">
                     <div class="position-relative bg-light overflow-hidden product-image-container">
@@ -152,7 +182,7 @@
                 </div>
             </div>
 
-            <!-- 2 -->
+            <!-- Poori -->
             <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="product-item">
                     <div class="position-relative bg-light overflow-hidden product-image-container">
@@ -168,24 +198,8 @@
                 </div>
             </div>
 
-            <!-- 3 -->
+            <!-- Paratha -->
             <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="product-item">
-                    <div class="position-relative bg-light overflow-hidden product-image-container">
-                        <img class="img-fluid w-100" src="img/idiyappam_image.jpeg" alt="">
-                        <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                    </div>
-                    <div class="text-center p-4">
-                        <a class="d-block h5 mb-2" href="">Idiyappam</a>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <a href="product_idiyappam.html" class="btn btn-outline-primary w-50 py-2 rounded-pill">Quick View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="product-item">
                     <div class="position-relative bg-light overflow-hidden product-image-container">
                         <img class="img-fluid w-100" src="img/poratta_img.png" alt="">
@@ -200,104 +214,30 @@
                 </div>
             </div>
 
-            <!-- 5 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="product-item">
-                    <div class="position-relative bg-light overflow-hidden product-image-container">
-                        <img class="img-fluid w-100" src="img/chola_poori.jpeg" alt="">
-                        <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                    </div>
-                    <div class="text-center p-4">
-                        <a class="d-block h5 mb-2" href="">Chola Poori</a>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <a href="product_chola_poori.html" class="btn btn-outline-primary w-50 py-2 rounded-pill">Quick View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 6 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="product-item">
-                    <div class="position-relative bg-light overflow-hidden product-image-container">
-                        <img class="img-fluid w-100" src="img/methi_chapati.jpeg" alt="">
-                        <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                    </div>
-                    <div class="text-center p-4">
-                        <a class="d-block h5 mb-2" href="">Methi Chapati</a>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <a href="product_methi.html" class="btn btn-outline-primary w-50 py-2 rounded-pill">Quick View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 7 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="product-item">
-                    <div class="position-relative bg-light overflow-hidden product-image-container">
-                        <img class="img-fluid w-100" src="img/masala_chapati.jpeg" alt="">
-                        <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                    </div>
-                    <div class="text-center p-4">
-                        <a class="d-block h5 mb-2" href="">Masala Chapati</a>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <a href="product_masala.html" class="btn btn-outline-primary w-50 py-2 rounded-pill">Quick View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 8 -->
+            <!-- Idly Batter -->
             <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="product-item">
                     <div class="position-relative bg-light overflow-hidden product-image-container">
-                        <img class="img-fluid w-100" src="img/ragi_chapati.jpeg" alt="">
+                        <img class="img-fluid w-100" src="img/idly_batter_img2.jpeg" alt="">
                         <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                     </div>
                     <div class="text-center p-4">
-                        <a class="d-block h5 mb-2" href="">Ragi Chapati</a>
+                        <a class="d-block h5 mb-2" href="">Idly/Dosa Batter</a>
                         <div class="d-flex justify-content-center align-items-center">
-                            <a href="product_ragi.html" class="btn btn-outline-primary w-50 py-2 rounded-pill">Quick View</a>
+                            <a href="product_batter.html" class="btn btn-outline-primary w-50 py-2 rounded-pill">Quick View</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 9 -->
+        </div>
+
+        <!-- Ready to Eat Section -->
+        <h2 class="mt-5 mb-4">Ready to Eat</h2>
+        <div class="row g-4">
+
+            <!-- Sevai -->
             <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="product-item">
-                    <div class="position-relative bg-light overflow-hidden product-image-container">
-                        <img class="img-fluid w-100" src="img/aapam_image.png" alt="">
-                        <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                    </div>
-                    <div class="text-center p-4">
-                        <a class="d-block h5 mb-2" href="">Aappam</a>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <a href="product_aappam.html" class="btn btn-outline-primary w-50 py-2 rounded-pill">Quick View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 10 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="product-item">
-                    <div class="position-relative bg-light overflow-hidden product-image-container">
-                        <img class="img-fluid w-100" src="img/idly_img.jpeg" alt="">
-                        <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                    </div>
-                    <div class="text-center p-4">
-                        <a class="d-block h5 mb-2" href="">Idly</a>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <a href="product_idly.html" class="btn btn-outline-primary w-50 py-2 rounded-pill">Quick View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 11 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="product-item">
                     <div class="position-relative bg-light overflow-hidden product-image-container">
                         <img class="img-fluid w-100" src="img/sevai_img.png" alt="">
@@ -312,21 +252,56 @@
                 </div>
             </div>
 
-            <!-- 12 (Coming Soon) -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp coming-soon" data-wow-delay="0.4s">
+            <!-- Idiyappam -->
+            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="product-item">
-                    <div class="position-relative bg-light overflow-hidden product-image-container coming-soon-overlay">
-                        <img class="img-fluid w-100" src="img/puttu_img.png" alt="">
-                        <div class="coming-soon-text">Coming Soon</div>
+                    <div class="position-relative bg-light overflow-hidden product-image-container">
+                        <img class="img-fluid w-100" src="img/idiyappam_image.jpeg" alt="">
+                        <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                     </div>
                     <div class="text-center p-4">
-                        <span class="d-block h5 mb-2 product-disabled">Puttu</span>
+                        <a class="d-block h5 mb-2" href="">Idiyappam</a>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="product_idiyappam.html" class="btn btn-outline-primary w-50 py-2 rounded-pill">Quick View</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 13 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <!-- Idly -->
+            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="product-item">
+                    <div class="position-relative bg-light overflow-hidden product-image-container">
+                        <img class="img-fluid w-100" src="img/idly_img.jpeg" alt="">
+                        <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
+                    </div>
+                    <div class="text-center p-4">
+                        <a class="d-block h5 mb-2" href="">Idly</a>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="product_idly.html" class="btn btn-outline-primary w-50 py-2 rounded-pill">Quick View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aappam -->
+            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="product-item">
+                    <div class="position-relative bg-light overflow-hidden product-image-container">
+                        <img class="img-fluid w-100" src="img/aapam_image.png" alt="">
+                        <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
+                    </div>
+                    <div class="text-center p-4">
+                        <a class="d-block h5 mb-2" href="">Aappam</a>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="product_aappam.html" class="btn btn-outline-primary w-50 py-2 rounded-pill">Quick View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Injipuli -->
+            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="product-item">
                     <div class="position-relative bg-light overflow-hidden product-image-container">
                         <img class="img-fluid w-100" src="img/ginger_pickle.png" alt="">
@@ -341,8 +316,8 @@
                 </div>
             </div>
 
-            <!-- 14 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <!-- Idly Powder -->
+            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="product-item">
                     <div class="position-relative bg-light overflow-hidden product-image-container">
                         <img class="img-fluid w-100" src="img/idly_powder.png" alt="">
@@ -358,12 +333,12 @@
             </div>
 
         </div>
+
     </div>
 </div>
+<!-- Product End -->
 
-        </div>
-    </div>
-    <!-- Product End -->
+
 
 
     <!-- Firm Visit Start -->
@@ -405,8 +380,7 @@
                 <!-- Address -->
                 <div class="col-lg-4 col-md-6 text-center text-md-start">
                     <h4 class="text-light mb-4">Contact Us</h4>
-                    <p><i class="fa fa-map-marker-alt me-3 text-primary"></i>131, Podanur Main Road, Kurichi, Tamil
-                        Nadu, India</p>
+                    <p><i class="fa fa-map-marker-alt me-3 text-primary"></i>62, Podanur Main Rd, Podanur, Coimbatore, Tamil Nadu 641023</p>
                    <p>
     <a href="tel:+918838369464" style="color: inherit; text-decoration: none;">
         <i class="fa fa-phone-alt me-3 text-primary"></i>
