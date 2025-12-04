@@ -280,6 +280,15 @@ html {
     z-index: 1;
 }
 
+.feature-img {
+    width: 100%;
+    height: 200px; /* same height for all images */
+    object-fit: cover; /* keeps full image visible */
+    border-radius: 16px;
+    border: 3px solid #e22b8d; /* you can override per image */
+}
+
+
 
 /*** Product ***/
 .nav-pills .nav-item .btn {
@@ -473,6 +482,35 @@ html {
     object-fit: cover; /* crop instead of shrink */
     object-position: center; /* keep center visible */
 }
+
+@media (max-width: 767px) {
+    .price-text {
+        font-size: 38px !important;   /* smaller but still big */
+    }
+
+    .pack-text {
+        font-size: 16px !important;
+    }
+}
+
+/* Mobile Style */
+@media (max-width: 767px) {
+    .info-row {
+        flex-direction: column;     /* stack vertically */
+        align-items: flex-start;    /* align left */
+        gap: 10px;
+    }
+
+    .info-item {
+        font-size: 16px !important; /* slightly smaller text */
+        margin: 0;
+    }
+
+    .info-item i {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 768px) {
     #header-carousel .carousel-item img {
         height: 60vh; /* shorter height on mobile */

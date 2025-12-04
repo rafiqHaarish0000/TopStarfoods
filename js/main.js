@@ -107,3 +107,4 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     alert("Your message is ready to be sent! Check your email client.");
 });
 
+
