@@ -493,15 +493,6 @@ html {
     transform: rotate(180deg);
 }
 
-
-
-
-
- 
-
-
-
-
 .whatsapp-chat:hover {
   background-color: #20ba5a !important;
   transform: scale(1.1);
@@ -516,8 +507,8 @@ html {
 
     .carousel-heading {
         font-size: 82px !important;      /* Bigger text */
-        line-height: 78px !important;    /* Better spacing */
-        font-weight: 600 !important;
+        line-height: 120px !important;    /* Better spacing */
+        font-weight: 700 !important;
     }
 
 /* Fix total carousel height in mobile */
