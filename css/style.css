@@ -555,7 +555,7 @@ html {
 @media (max-width: 480px) {
 
     #header-carousel .carousel-item img {
-        height: 260px !important;     /* your required height */
+        height: 460px !important;     /* your required height */
         object-fit: cover !important; 
         object-position: right center !important; /* SHOW RIGHT SIDE FULLY */
     }
@@ -566,8 +566,8 @@ html {
 
     .carousel-heading {
        margin-left: 2% !important;
-        font-size: 18px !important;
-        line-height: 24px !important;
+        font-size: 20px !important;
+        line-height: 30px !important;
         font-weight: 800 !important;
     }
 }
