@@ -178,19 +178,7 @@ html {
     border-radius: 3rem;
 }
 
-@media (max-width: 768px) {
-    #header-carousel .carousel-item {
-        position: relative;
-        min-height: 450px;
-    }
-    
-    #header-carousel .carousel-item img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
+
 
 .page-header {
     padding-top: 12rem;
@@ -507,31 +495,10 @@ html {
 
 
 
-/* 🔥 Mobile View Fix */
-@media (max-width: 767px) {
 
-        .banner-section {
-        margin-top: 100px; /* adjust as needed */
-    }
 
-    .banner-text {
-        bottom: -30px !important; /* move slightly up */
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        width: 90%; /* ensure text fits inside image */
-        text-align: center;
-        padding: 0;
-        
-    }
+ 
 
-    .banner-heading {
-        font-size: 1rem !important; /* smaller & clean */
-        line-height: 1.3 !important;
-        font-weight: 700;
-        word-break: break-word; /* prevents ugly breaks */
-        white-space: normal; /* wraps naturally */
-    }
-}
 
 
 
@@ -546,6 +513,65 @@ html {
     object-fit: cover; /* crop instead of shrink */
     object-position: center; /* keep center visible */
 }
+
+    .carousel-heading {
+        font-size: 82px !important;      /* Bigger text */
+        line-height: 78px !important;    /* Better spacing */
+        font-weight: 600 !important;
+    }
+
+/* Fix total carousel height in mobile */
+@media (max-width: 768px) {
+
+    /* Force carousel item to wrap tightly */
+    #header-carousel .carousel-item {
+        height: auto !important;
+    }
+
+    /* Set proper height for the image */
+    #header-carousel .carousel-item img {
+        height: 300px !important; /* adjust as you like */
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Remove h-100 which causes extra height */
+    #header-carousel .carousel-caption {
+        position: absolute;
+        top: 40px;
+        bottom: auto;
+        height: auto !important;
+        transform: none !important;
+    }
+
+    /* Resize text for mobile */
+    .carousel-heading {
+        font-size: 22px !important;
+        line-height: 28px !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+
+    #header-carousel .carousel-item img {
+        height: 260px !important;     /* your required height */
+        object-fit: cover !important; 
+        object-position: right center !important; /* SHOW RIGHT SIDE FULLY */
+    }
+
+    #header-carousel .carousel-caption {
+        top: 20px !important;
+    }
+
+    .carousel-heading {
+       margin-left: 2% !important;
+        font-size: 18px !important;
+        line-height: 24px !important;
+        font-weight: 800 !important;
+    }
+}
+
 
     /* Mobile View */
     @media (max-width: 768px) {
@@ -596,11 +622,7 @@ html {
     }
 }
 
-@media (max-width: 768px) {
-    #header-carousel .carousel-item img {
-        height: 60vh; /* shorter height on mobile */
-    }
-}  
+
 
 @media (max-width: 768px) {
     .whatsapp-chat i {
