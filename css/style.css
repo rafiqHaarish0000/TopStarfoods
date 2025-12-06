@@ -499,8 +499,9 @@ html {
 }
 
 #header-carousel .carousel-item img {
+    
     width: 100%;
-    height: 100vh; /* full screen height */
+    height: auto; /* full screen height */
     object-fit: cover; /* crop instead of shrink */
     object-position: center; /* keep center visible */
 }
@@ -542,11 +543,32 @@ html {
     }
 }
 
+
+/* Add this to your CSS file */
+
+.slide-in-left {
+    animation: slideIn 2.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 /* Extra small phones */
 @media (max-width: 480px) {
 
     #header-carousel .carousel-item img {
-        height: 460px !important;     /* your required height */
+        margin-top: 90px !important; /* adjust as needed */
+        height: auto !important;     /* your required height */
         object-fit: cover !important; 
         object-position: right center !important; /* SHOW RIGHT SIDE FULLY */
     }
