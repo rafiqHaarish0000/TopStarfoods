@@ -505,12 +505,28 @@ html {
     object-fit: cover; /* crop instead of shrink */
     object-position: center; /* keep center visible */
 }
+.carousel-heading {
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: clamp(60px, 8vw, 148px) !important; /* Responsive font size */
+    line-height: 1.2 !important; /* relative to font size */
+    font-weight: 600 !important;
+    text-align: left !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 
-    .carousel-heading {
-        font-size: 82px !important;      /* Bigger text */
-        line-height: 120px !important;    /* Better spacing */
-        font-weight: 700 !important;
-    }
+    /* Gradient color */
+    background: linear-gradient(90deg, #c4ecc4, #f6ea84); /* White to yellow */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* required for gradient text */
+}
+
+
+/* Banner Subtext - Desktop */
+.banner-subtext {
+    font-weight: 600 !important;
+    font-size: 26px; /* Desktop default */
+}
 
 /* Fix total carousel height in mobile */
 @media (max-width: 768px) {
@@ -538,14 +554,27 @@ html {
 
     /* Resize text for mobile */
     .carousel-heading {
-        font-size: 22px !important;
-        line-height: 28px !important;
+        font-family: 'Orbitron', sans-serif !important;
+        font-size: 18px !important;
+        line-height: 22px !important;
+        font-weight: 600 !important;
+        text-align: left !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        /* Gradient color */
+    background: linear-gradient(90deg, #c4ecc4, #f6ea84); /* White to yellow */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* required for gradient text */
     }
-}
+
+    /* Subtext for mobile */
+    .banner-subtext {
+        font-size: 10px !important;
+    }
 
 
 /* Add this to your CSS file */
-
 .slide-in-left {
     animation: slideIn 2.5s ease-out forwards;
     opacity: 0;
@@ -562,28 +591,58 @@ html {
     }
 }
 
+/* Default Desktop Image */
+#hero-banner {
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: right center !important;
+}
+}
 
-/* Extra small phones */
+/* Mobile View */
 @media (max-width: 480px) {
+    #hero-banner {
+        content: url('../img/mobile_banner.png'); /* Mobile-optimized image */
+        width: 100%;               /* Fit full width */
+        height: 360px !important;  /* Reduced height for mobile */
+        object-fit: cover;         /* Keep image sharp */
+        object-position: center;   /* Center important area */
+        display: block;
+    }
 
-    #header-carousel .carousel-item img {
-        margin-top: 90px !important; /* adjust as needed */
-        height: auto !important;     /* your required height */
-        object-fit: cover !important; 
-        object-position: right center !important; /* SHOW RIGHT SIDE FULLY */
+    /* Optional: remove extra spacing around banner */
+    .carousel-item img,
+    .carousel-item {
+        padding: 0;
+        margin: 0;
     }
 
     #header-carousel .carousel-caption {
         top: 20px !important;
     }
 
+    /* Heading for extra small mobile */
     .carousel-heading {
-       margin-left: 2% !important;
-        font-size: 20px !important;
-        line-height: 30px !important;
-        font-weight: 800 !important;
+        font-family: 'Orbitron', sans-serif !important;
+        font-size: 18px !important;
+        line-height: 22px !important;
+        font-weight: 600 !important;
+        text-align: left !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        /* Gradient color */
+    background: linear-gradient(90deg, #c4ecc4, #f6ea84); /* White to yellow */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* required for gradient text */
+    }
+
+    /* Subtext for extra small mobile */
+    .banner-subtext {
+        font-size: 10px !important;
     }
 }
+
 
 
     /* Mobile View */
