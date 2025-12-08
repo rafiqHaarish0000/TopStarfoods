@@ -178,7 +178,19 @@ html {
     border-radius: 3rem;
 }
 
-
+@media (max-width: 768px) {
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: 450px;
+    }
+    
+    #header-carousel .carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 
 .page-header {
     padding-top: 12rem;
@@ -190,7 +202,6 @@ html {
 .breadcrumb-item+.breadcrumb-item::before {
     color: #999999;
 }
-
 
 
 /*** Section Header ***/
@@ -236,6 +247,30 @@ html {
     left: 0;
     transform: translateX(0);
 }
+
+.banner-section {
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background-image: url('/img/image\ copy\ 4.png'); /* Path to your banner image */
+    background-size: cover;      /* Fixes cropping and stretching issues */
+    background-position: center; /* Centers image correctly */
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/* Optional: Adjust for mobile */
+@media (max-width: 768px) {
+    .banner-section {
+        background-image: url('/img/mobile_banner.jpeg'); /* Use a different image for mobile if needed */
+        height: 75vh;               /* prevent zoom */
+        padding-top: 60%;           /* maintain image aspect ratio */
+        background-size: cover;   /* full image visible */
+        background-position: top center;
+         background-repeat: no-repeat;
+    background-attachment: scroll;
+    }
+}
+
 
 
 
@@ -288,8 +323,6 @@ html {
 .nav-pills .nav-item .btn.active {
     color: #FFFFFF;
 }
-
-
 
 .product-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
@@ -462,209 +495,17 @@ html {
 }
 
 
-/* Desktop view */
-.banner-text {
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    text-align: center;
-}
-
-.banner-heading {
-    color: black;
-    font-weight: 700;
-    font-size: 2.5rem;
-}
-
-.sub-toggle {
-    padding: 8px 12px;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    color: #000;
-}
-
-.sub-toggle .arrow {
-    transition: transform 0.3s ease;
-}
-
-.sub-toggle[aria-expanded="true"] .arrow {
-    transform: rotate(180deg);
-}
-
 .whatsapp-chat:hover {
   background-color: #20ba5a !important;
   transform: scale(1.1);
 }
 
 #header-carousel .carousel-item img {
-    
     width: 100%;
-    height: auto; /* full screen height */
+    height: 100vh; /* full screen height */
     object-fit: cover; /* crop instead of shrink */
     object-position: center; /* keep center visible */
 }
-.carousel-heading {
-    font-family: 'Orbitron', sans-serif !important;
-    font-size: clamp(60px, 8vw, 148px) !important; /* Responsive font size */
-    line-height: 1.2 !important; /* relative to font size */
-    font-weight: 600 !important;
-    text-align: left !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-
-    /* Gradient color */
-    background: linear-gradient(90deg, #c4ecc4, #f6ea84); /* White to yellow */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block; /* required for gradient text */
-}
-
-
-/* Banner Subtext - Desktop */
-.banner-subtext {
-    font-weight: 600 !important;
-    font-size: 26px; /* Desktop default */
-}
-
-/* Fix total carousel height in mobile */
-@media (max-width: 768px) {
-
-    /* Force carousel item to wrap tightly */
-    #header-carousel .carousel-item {
-        height: auto !important;
-    }
-
-    /* Set proper height for the image */
-    #header-carousel .carousel-item img {
-        height: 300px !important; /* adjust as you like */
-        object-fit: cover;
-        object-position: center;
-    }
-
-    /* Remove h-100 which causes extra height */
-    #header-carousel .carousel-caption {
-        position: absolute;
-        top: 40px;
-        bottom: auto;
-        height: auto !important;
-        transform: none !important;
-    }
-
-    /* Resize text for mobile */
-    .carousel-heading {
-        font-family: 'Orbitron', sans-serif !important;
-        font-size: 18px !important;
-        line-height: 22px !important;
-        font-weight: 600 !important;
-        text-align: left !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-        /* Gradient color */
-    background: linear-gradient(90deg, #c4ecc4, #f6ea84); /* White to yellow */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block; /* required for gradient text */
-    }
-
-    /* Subtext for mobile */
-    .banner-subtext {
-        font-size: 10px !important;
-    }
-
-
-/* Add this to your CSS file */
-.slide-in-left {
-    animation: slideIn 2.5s ease-out forwards;
-    opacity: 0;
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Default Desktop Image */
-#hero-banner {
-    height: auto !important;
-    object-fit: cover !important;
-    object-position: right center !important;
-}
-}
-
-/* Mobile View */
-@media (max-width: 480px) {
-    #hero-banner {
-        content: url('../img/mobile_banner.png'); /* Mobile-optimized image */
-        width: 100%;               /* Fit full width */
-        height: 360px !important;  /* Reduced height for mobile */
-        object-fit: cover;         /* Keep image sharp */
-        object-position: center;   /* Center important area */
-        display: block;
-    }
-
-    /* Optional: remove extra spacing around banner */
-    .carousel-item img,
-    .carousel-item {
-        padding: 0;
-        margin: 0;
-    }
-
-    #header-carousel .carousel-caption {
-        top: 20px !important;
-    }
-
-    /* Heading for extra small mobile */
-    .carousel-heading {
-        font-family: 'Orbitron', sans-serif !important;
-        font-size: 18px !important;
-        line-height: 22px !important;
-        font-weight: 600 !important;
-        text-align: left !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-        /* Gradient color */
-    background: linear-gradient(90deg, #c4ecc4, #f6ea84); /* White to yellow */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block; /* required for gradient text */
-    }
-
-    /* Subtext for extra small mobile */
-    .banner-subtext {
-        font-size: 10px !important;
-    }
-}
-
-
-
-    /* Mobile View */
-    @media (max-width: 768px) {
-        .position-relative {
-            padding-top: 50px; /* Reduced top padding for smaller screens */
-        }
-
-        .main-heading {
-            font-size: 28px; /* Smaller font size for mobile */
-            line-height: 1.3;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .main-heading {
-            font-size: 22px; /* Even smaller on very small screens */
-            line-height: 1.2;
-        }
-    }
-
-    
 
 @media (max-width: 767px) {
     .price-text {
@@ -694,7 +535,11 @@ html {
     }
 }
 
-
+@media (max-width: 768px) {
+    #header-carousel .carousel-item img {
+        height: 60vh; /* shorter height on mobile */
+    }
+}  
 
 @media (max-width: 768px) {
     .whatsapp-chat i {
@@ -881,11 +726,11 @@ html {
     }
 
     .navbar {
-        padding: 10px 15px !important;
+        padding: 1px 1px !important;
     }
 
     .navbar-brand img {
-        height: 90px !important;    /* Reduce big logo */
+        height: 60px !important;    /* Reduce big logo */
     }
 
     .navbar-collapse {
@@ -897,8 +742,6 @@ html {
         padding: 10px 0 !important;
         font-size: 16px;
     }
-
-    
 
     /* ---------- PAGE HEADER ---------- */
     .section-header h1 {
