@@ -251,7 +251,7 @@ html {
 .banner-section {
     width: 100%;
     height: 100vh; /* Full screen height */
-    background-image: url('/img/image\ copy\ 4.png'); /* Path to your banner image */
+    background-image: url('/img/desktop_banner.png'); /* Path to your banner image */
     background-size: cover;      /* Fixes cropping and stretching issues */
     background-position: center; /* Centers image correctly */
     background-repeat: no-repeat;
@@ -261,7 +261,7 @@ html {
 /* Optional: Adjust for mobile */
 @media (max-width: 768px) {
     .banner-section {
-        background-image: url('/img/mobile_banner.jpeg'); /* Use a different image for mobile if needed */
+        background-image: url('/img/mobile_banner_2.png'); /* Use a different image for mobile if needed */
         height: 75vh;               /* prevent zoom */
         padding-top: 60%;           /* maintain image aspect ratio */
         background-size: cover;   /* full image visible */
@@ -730,7 +730,7 @@ html {
     }
 
     .navbar-brand img {
-        height: 60px !important;    /* Reduce big logo */
+        height: 90px !important;    /* Reduce big logo */
     }
 
     .navbar-collapse {
